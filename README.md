@@ -1,5 +1,7 @@
 
-https://github.com/byrontorres/ML_RecSys_Model/blob/main/src/FotoJet_3.jpg
+
+![imagen steam](https://github.com/byrontorres/ML_RecSys_Model/blob/main/src/FotoJet_3.jpg)
+
 
 
 ## Steam Game Recommendation System
@@ -23,7 +25,11 @@ Este proyecto se centra en el desarrollo de una API utilizando FastAPI para prop
    - Mantenimiento y actualización de la infraestructura del modelo según sea necesario.
 
 
-   https://github.com/byrontorres/ML_RecSys_Model/blob/main/src/DiagramaConceptualDelFlujoDeProcesos.png
+
+   
+
+   ![Diagrama de flujo](https://github.com/byrontorres/ML_RecSys_Model/blob/main/src/DiagramaConceptualDelFlujoDeProcesos.png)
+
 
 #### Estructura de Querys para Construcción de los Endpoints
 
@@ -143,7 +149,10 @@ Una vez que el servidor esté en funcionamiento, puedes acceder a los diferentes
 
 El proceso para llevar el sistema a producción en Render fue el siguiente:
 
-https://github.com/byrontorres/ML_RecSys_Model/blob/main/src/Render.jpg
+![Render](https://github.com/byrontorres/ML_RecSys_Model/blob/main/src/Render.jpg)
+
+
+
 
 
 1. **Preparación del Código**: Primero, aseguramos que nuestro código estuviera listo para la producción. Esto incluyó verificar que todos los archivos y dependencias estuvieran correctamente configurados y que el código estuviera libre de errores.
