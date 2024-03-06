@@ -9,8 +9,8 @@ app = FastAPI()
 ## **1. Endpoint para obtener al usuario con más horas jugadas en un género específico**
 
 # Cargar los datos
-df_games = pd.read_csv(r'C:/Users/pc-admin/Documents/ML_RecSys_Model/Data_ETL/data_games_clean.csv')
-df_users_items = pd.read_csv(r'C:/Users/pc-admin/Documents/ML_RecSys_Model/Data_ETL/data_users_items_clean.csv')
+df_games = pd.read_csv(r'Data_ETL\data_games_clean.csv')
+df_users_items = pd.read_csv(r'Data_ETL\data_users_items_clean.csv')
 
 # Definir el Endpoint
 @app.get("/most_played_user_in_genre")
@@ -34,8 +34,8 @@ async def most_played_user_in_genre(genre: str):
 ## **2. Endpoint para Obtener Top 3 Juegos Más Recomendados por Usuarios para un Año:**
 
 # Cargar los datos
-df_reviews = pd.read_csv(r'C:/Users/pc-admin/Documents/ML_RecSys_Model/Data_ETL/user_reviews_clean.csv')
-df_games = pd.read_csv(r'C:/Users/pc-admin/Documents/ML_RecSys_Model/Data_ETL/data_games_clean.csv')
+df_reviews = pd.read_csv(r'Data_ETL\user_reviews_clean.csv')
+df_games = pd.read_csv(r'Data_ETL\data_games_clean.csv')
 
 # Definir el Endpoint
 @app.get("/top_games/{year}")
@@ -65,7 +65,7 @@ async def get_top_games(year: int):
 ## **3. Endpoint para Detalles del Juego Recomendado:**
 
 # Cargar el conjunto de datos de juegos
-df_games = pd.read_csv(r'C:/Users/pc-admin/Documents/ML_RecSys_Model/Data_ETL/data_games_clean.csv')
+df_games = pd.read_csv(r'Data_ETL\data_games_clean.csv')
 
 # Definir el Endpoint
 @app.get("/recommended_game/{game_id}")
@@ -94,10 +94,10 @@ async def get_recommended_game_details(game_id: int):
 
 
 # Cargar el dataset de juegos
-df_games = pd.read_csv(r'C:/Users/pc-admin/Documents/ML_RecSys_Model/Data_ETL/data_games_clean.csv')
+df_games = pd.read_csv(r'Data_ETL\data_games_clean.csv')
 
 # Cargar el dataset de horas jugadas por usuario
-df_hours = pd.read_csv(r'C:/Users/pc-admin/Documents/ML_RecSys_Model/Data_ETL/data_users_items_clean.csv')
+df_hours = pd.read_csv(r'Data_ETL\data_users_items_clean.csv')
 
 # Unir los datasets de horas jugadas y juegos
 merged_df = pd.merge(df_hours, df_games, left_on='item_id', right_on='id')
@@ -127,8 +127,8 @@ async def get_stats():
 ## **5. Enpoint para identificar los juegos que mas le gusta a cada usuario y su sentimiento sobre el juego**
 
 # Cargar los DataFrames
-df_users_items = pd.read_csv(r'C:/Users/pc-admin/Documents/ML_RecSys_Model/Data_ETL/data_users_items_clean.csv')
-df_user_reviews = pd.read_csv(r'C:/Users/pc-admin/Documents/ML_RecSys_Model/Data_ETL/user_reviews_clean.csv')
+df_users_items = pd.read_csv(r'Data_ETL\data_users_items_clean.csv')
+df_user_reviews = pd.read_csv(r'Data_ETL\user_reviews_clean.csv')
 
 
 # Definir el Endpoint para obtener la información del usuario
@@ -177,7 +177,7 @@ async def get_user_info(user_id: str):
 
 
 def cargar_recomendaciones():
-    return pd.read_csv(r'C:/Users/pc-admin/Documents/ML_RecSys_Model/SistemReco/feel.csv')
+    return pd.read_csv(r'SistemReco\feel.csv')
 
 # Función para obtener las recomendaciones para un item_id dado
 def obtener_recomendaciones(item_id, df):
