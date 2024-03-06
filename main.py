@@ -9,7 +9,7 @@ app = FastAPI()
 ## **1. Endpoint para obtener al usuario con más horas jugadas en un género específico**
 
 # Cargar los datos
-df_games = pd.read_csv(r'Data_ETL\data_games_clean.csv')
+df_games = pd.read_csv(r'Data_ETL//data_games_clean.csv')
 df_users_items = pd.read_csv(r'Data_ETL\data_users_items_clean.csv')
 
 # Definir el Endpoint
@@ -35,7 +35,7 @@ async def most_played_user_in_genre(genre: str):
 
 # Cargar los datos
 df_reviews = pd.read_csv(r'Data_ETL\user_reviews_clean.csv')
-df_games = pd.read_csv(r'Data_ETL\data_games_clean.csv')
+df_games = pd.read_csv(r'Data_ETL//data_games_clean.csv')
 
 # Definir el Endpoint
 @app.get("/top_games/{year}")
@@ -65,7 +65,7 @@ async def get_top_games(year: int):
 ## **3. Endpoint para Detalles del Juego Recomendado:**
 
 # Cargar el conjunto de datos de juegos
-df_games = pd.read_csv(r'Data_ETL\data_games_clean.csv')
+df_games = pd.read_csv(r'Data_ETL//data_games_clean.csv')
 
 # Definir el Endpoint
 @app.get("/recommended_game/{game_id}")
@@ -94,7 +94,7 @@ async def get_recommended_game_details(game_id: int):
 
 
 # Cargar el dataset de juegos
-df_games = pd.read_csv(r'Data_ETL\data_games_clean.csv')
+df_games = pd.read_csv(r'Data_ETL//data_games_clean.csv')
 
 # Cargar el dataset de horas jugadas por usuario
 df_hours = pd.read_csv(r'Data_ETL\data_users_items_clean.csv')
