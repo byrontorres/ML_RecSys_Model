@@ -1,4 +1,8 @@
-### Steam Game Recommendation System
+
+https://github.com/byrontorres/ML_RecSys_Model/blob/main/src/FotoJet_3.jpg
+
+
+## Steam Game Recommendation System
 
 Este proyecto se centra en el desarrollo de una API utilizando FastAPI para proporcionar funcionalidades relacionadas con la recomendación de videojuegos en la plataforma Steam. Implica tareas de transformación de datos, ingeniería de características, desarrollo de la API y despliegue en un servicio en la nube como Render.
 
@@ -17,6 +21,9 @@ Este proyecto se centra en el desarrollo de una API utilizando FastAPI para prop
 3. **Implementación y Uso del Modelo**:
    - Integración del modelo en la aplicación o sistema para su uso efectivo.
    - Mantenimiento y actualización de la infraestructura del modelo según sea necesario.
+
+
+   https://github.com/byrontorres/ML_RecSys_Model/blob/main/src/DiagramaConceptualDelFlujoDeProcesos.png
 
 #### Estructura de Querys para Construcción de los Endpoints
 
@@ -135,6 +142,9 @@ Una vez que el servidor esté en funcionamiento, puedes acceder a los diferentes
 
 
 El proceso para llevar el sistema a producción en Render fue el siguiente:
+
+https://github.com/byrontorres/ML_RecSys_Model/blob/main/src/Render.jpg
+
 
 1. **Preparación del Código**: Primero, aseguramos que nuestro código estuviera listo para la producción. Esto incluyó verificar que todos los archivos y dependencias estuvieran correctamente configurados y que el código estuviera libre de errores.
 
