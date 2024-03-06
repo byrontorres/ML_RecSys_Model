@@ -2,6 +2,9 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi import FastAPI
 import pandas as pd
 
+
+
+
 # Inicializar la aplicación FastAPI
 app = FastAPI()
 
@@ -90,14 +93,16 @@ async def get_recommended_game_details(game_id: int):
 
 
 
-## **4. Endpoint para identificar año con menor horas jugadas y juegos menos populares:**
 
+
+"""
+## **4. Endpoint para identificar año con menor horas jugadas y juegos menos populares:**
 
 # Cargar el dataset de juegos
 df_games = pd.read_csv('Data_ETL/data_games_clean.csv')
 
 # Cargar el dataset de horas jugadas por usuario
-df_hours = pd.read_csv('Data_ETL/data_users_items_clean.csv')
+df_hours = pd.read_csv('Data_ETL/data_user_items_clean.csv')
 
 # Unir los datasets de horas jugadas y juegos
 merged_df = pd.merge(df_hours, df_games, left_on='item_id', right_on='id')
@@ -121,9 +126,7 @@ async def get_stats():
         "least_hours_played": float(least_hours_played),  # Convertir a flotante
         "bottom_10_games": bottom_10_games.reset_index().to_dict()  # Resetear el índice para evitar problemas
     }
-
-
-
+"""
 
 ## **5. Enpoint para identificar los juegos que mas le gusta a cada usuario y su sentimiento sobre el juego**
 
