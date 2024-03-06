@@ -65,7 +65,7 @@ async def get_top_games(year: int):
 ## **3. Endpoint para Detalles del Juego Recomendado:**
 
 # Cargar el conjunto de datos de juegos
-df_games = pd.read_csv('C:\\Users\\pc-admin\\Documents\\ML_RecSys_Model\\Data_ETL\\data_games_clean.csv')
+df_games = pd.read_csv(r'C:\Users\pc-admin\Documents\ML_RecSys_Model\Data_ETL\data_games_clean.csv')
 
 # Definir el Endpoint
 @app.get("/recommended_game/{game_id}")
@@ -94,10 +94,10 @@ async def get_recommended_game_details(game_id: int):
 
 
 # Cargar el dataset de juegos
-df_games = pd.read_csv('C:\\Users\\pc-admin\\Documents\\ML_RecSys_Model\\Data_ETL\\data_games_clean.csv')
+df_games = pd.read_csv(r'C:\Users\pc-admin\Documents\ML_RecSys_Model\Data_ETL\data_games_clean.csv')
 
 # Cargar el dataset de horas jugadas por usuario
-df_hours = pd.read_csv('C:\\Users\\pc-admin\\Documents\\ML_RecSys_Model\\Data_ETL\\data_users_items_clean.csv')
+df_hours = pd.read_csv(r'C:\Users\pc-admin\Documents\ML_RecSys_Model\Data_ETL\data_users_items_clean.csv')
 
 # Unir los datasets de horas jugadas y juegos
 merged_df = pd.merge(df_hours, df_games, left_on='item_id', right_on='id')
