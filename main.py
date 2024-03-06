@@ -124,6 +124,7 @@ async def get_stats():
 
 
 
+
 ## **5. Enpoint para identificar los juegos que mas le gusta a cada usuario y su sentimiento sobre el juego**
 
 # Cargar los DataFrames
