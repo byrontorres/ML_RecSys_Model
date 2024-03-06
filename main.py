@@ -1,7 +1,6 @@
 from fastapi import FastAPI, HTTPException, Query
 from fastapi import FastAPI
 import pandas as pd
-from flask import Flask, request, jsonify
 
 # Inicializar la aplicación FastAPI
 app = FastAPI()
